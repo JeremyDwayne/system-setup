@@ -44,15 +44,3 @@
   tags:
     - install
     - core
-
-- name: Check if Homebrew is already installed
-  stat:
-    path: /usr/local/bin/brew
-  register: b
-
-  - name: Install Homebrew
-    script: install-homebrew.sh
-    when: not b.stat.exists
-    tags:
-      - install
-      - core
