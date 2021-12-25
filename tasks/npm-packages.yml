@@ -12,6 +12,13 @@
   tags:
     - install
     - node
+- name: Install prettier
+  npm:
+    name: prettier
+    global: yes
+  tags:
+    - install
+    - node
 - name: Install Typescript server
   npm:
     name: typescript-language-server
